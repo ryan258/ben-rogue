@@ -1,0 +1,255 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@include foundation-global-styles;
+// @include foundation-grid;
+// @include foundation-flex-grid;
+//
+@include foundation-xy-grid-classes;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+// @include foundation-float-classes;
+@include foundation-flex-classes;
+
+@include foundation-prototype-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+.no-js {
+  @include breakpoint(small only) {
+    .top-bar {
+      display: none;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .title-bar {
+      display: none;
+    }
+  }
+}
+
+.top-bar {
+  border-bottom: $topbar-border-bottom;
+  // opacity: .5;
+  a {
+    // color: yellow;
+  }
+
+  &-center {
+    .menu { 
+      text-align: center;
+      justify-content: center;
+    }
+  }
+
+}
+
+.bg {
+  &--crowd {
+    height: 100vh; // 387px;
+    background-image: url('/assets/img/bg--crowd.jpg');
+    // background-repeat: no-repeat;
+    // background-attachment: co;
+    // background-position: center;
+    background-size: cover;
+    background-position: center top;
+    margin-bottom: 1.5rem;
+  }
+}
+
+// .flex-container {
+//   display: flex;
+// }
+
+.align-items-center {
+  display: flex;
+  align-items: center;
+  height: 260px; //70vh;
+}
+
+.justify-content-center {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.align-self {
+  &-left {
+    align-self: flex-start;
+  }
+  &-center {
+    align-self: center; }
+  &-right {
+    align-self: flex-end;
+  }
+}
+
+.featured-audio,
+.feature-youtube-section {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.header {
+  &-big {
+    height: 387px;
+    background-image: url('http://placehold.it/1600x487');
+    // background-repeat: no-repeat;
+    // background-attachment: co;
+    // background-position: center;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.container-title {
+  padding-top: 1rem;
+}
+
+.callout {
+  &-blue {
+    background-color: $blue;
+    color: $white;
+  }
+}
+
+.bg {
+  &-blue {
+    background: $blue;
+  }
+  &-darkblue {
+    background: $darkblue;
+  }
+}
+
+.big-youtube {
+  text-align: center;
+  .fa-youtube {
+    font-size: 6rem;
+    color: red;
+  }
+}
+
+.card {
+  &-video {
+    background: $darkblue;
+    color: $white;
+    padding-bottom: .5rem;
+    h2 {
+      padding-top: 12px;
+      padding-bottom: 0;
+      margin-bottom: 6px;
+    }
+    .card-section:hover {
+      background: $white;
+      h2 {
+        color: $blue;
+      }
+      p {
+        color: $black;
+      }
+    }
+  }
+}
+
+.component {
+  &-events {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background: $darkblue;
+    h3, p {
+      color: $white;
+
+    }
+    .card {
+      background: $darkblue;
+      color: $white;
+      .card-section:hover {
+        background: $white;
+        h3 {
+          color: $blue;
+        }
+        p {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  // text-align: center;
+  background: #000;
+  color: #fff;
+  padding-top: 1rem;
+  h2, h3 {
+    text-transform: uppercase;
+  }
+}
+
+.home {
+  &-header {
+    // height: 100vh; // 387px;
+    max-height: 260px;
+    background-image: url('https://i1.sndcdn.com/visuals-000020614462-5D0MVL-t1240x260.jpg');
+    // background-repeat: no-repeat;
+    // background-attachment: co;
+    // background-position: center;
+    background-size: cover;
+    background-position: center top;
+    margin-bottom: 1.5rem;
+    
+  }
+}
+
+.grid-x {
+  &.tour {
+    h3 {
+      margin-bottom: .25rem;
+    }
+    .venue {
+      font-size: 125%;
+    }
+  }
+}
